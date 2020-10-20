@@ -24,7 +24,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <!-- Navigation Bar -->
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <!-- Nav Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -49,32 +51,44 @@
 
 <main role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <!-- jumbotron element for full page image -->
+  <!-- full page and background image adjusted in style.css -->
   <div class="jumbotron hero-image">
-
           <div class="hero-text">
-            <h1 class="display-5">This is the MPS Starter Template</h1>
+            <h1>This is the MPS Starter Template</h1>
             <p class="display-12">Scroll down to learn more</p>
           </div>
         </div>
 
-
+  <!-- Start every section with a new container -->
   <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
+    <!--Container headline and text -->
     <h2 class="display-4">This template is written with HTML, CSS and JS</h2>
     <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       
           <!-- Example row of columns -->
           <div class="row">
+
+            <!-- First column for HTML -->
+            <!-- col-md-4 for three elements -->
             <div class="col-md-4">
+
+              <!-- Title of the column -->
               <h3>HTML</h3>
+              <!-- Text content of the column -->
               <p>HTML stands for HyperText Markup Language. It is what defines and conrols the Elements on the Page. What you are reading now is written in an html document.</p>
+              <!-- Button with href to w3schools -->
               <p><a class="btn btn-secondary" role="button" href="https://www.w3schools.com/html/">Learn more about HTML &raquo;</a></p>
             </div>
+
+            <!-- Second column for CSS -->
             <div class="col-md-4">
               <h3>CSS</h3>
               <p>CSS stands for Cascading Style Sheet. Here you define how things look, such as color, size, position, but also things like animations and visibility.</p>
               <p><a class="btn btn-secondary" role="button" href="https://www.w3schools.com/css/">Learn more about CSS &raquo;</a></p>
             </div>
+
+            <!-- Third column for JS -->
             <div class="col-md-4">
               <h3>JS</h3>
               <p>JS stands for JavaScript. It is one of the most popular programming languages and the main programming language used for Web Pages</p>
@@ -84,14 +98,17 @@
       
           <hr>
       
-  </div> <!-- /container -->
+  </div> 
+  <!-- /container -->
 
-        
+    <!-- container for bootstrap section-->    
     <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
-          <h1 class="display-4">This template uses Bootstrap</h1>
+          <h1 class="display-4">This template also uses Bootstrap</h1>
           <p>Bootstrap is a framework that let's us easily design and control layouts on a Webpage. </br>
             It's made up of predefinded Elements that you can use. This way, you can control how your webpage looks and behaves without having to write custom code.</br>
             Below you can find an example.</p>
+
+            <!-- Code block for demonstration -->
             <pre><code>
               &lt;div class="container"&gt;</br>
                 &lt;class="row"&gt;</br>
@@ -118,7 +135,9 @@
 
       <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
         <h2>Delivering Content with bootstrap</h2>
+        <!-- row for displaying columns -->
         <div class="row">
+          <!-- size 6 for two elements -->
           <div class="col-md-6">
             <p>
               Delivering beautiful and readable content with bootstrap is simple.
@@ -164,7 +183,7 @@
 
     
 
-
+      <!-- container for javascript example -->
     <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
       <h2 class="display-4">Do "things" with Javascript</h2>
       <p>Next, we will look at how to make things do things. While HTML and CSS are able to work completely by themselves, 
@@ -175,8 +194,11 @@
         The corresponding code can be found in the following section.
 
       </p>
+      <!-- Input fields for getting numbers -->
       <input type ="text" id ="first"> + <input type ="text" id ="second">
+      <!-- result text element for displaying result -->
       <p id="result">Result</p>
+      <!-- button for calculation, is triggered by event -->
       <p><a class="btn btn-primary" role="button" id="calc">Calculate</a></p>
     </div>
 
@@ -233,6 +255,15 @@
     </div>
   </br>
 
+  <div class="container py-5" data-aos="fade-up" data-aos-duration="3000">
+    <h2 class="display-4">Download this template</h2>
+    <p>
+      You can download this template from GitHub.
+      Click the button below to open the repository.
+    </p>
+    <p><a class="btn btn-primary" role="button" href="https://github.com/MarkusSchmitz/MPS_Template">Get the code</a></p>
+  </div>
+
 
       
 
@@ -241,32 +272,39 @@
 <footer class="container">
   <p>&copy; Markus Schmitz 2020</p>
 </footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-      <script>
-        // Define an Event if button is clicked
-        var calcbutton = document.getElementById("calc");
-              calcbutton.addEventListener("click", calculate);
-      
-              // calculate function
-              function calculate() {
 
-                // Get the values of both inputs
-                var first = parseInt(document.getElementById("first").value);
-                var second = parseInt(document.getElementById("second").value);
-      
-                // Check if inouts are numbers, if so, output result, if not output warning
-                if (isNaN(first) || isNaN(second)){
-                  document.getElementById("result").innerHTML = "One of your inputs is not a number";
-                } 
-                else {
-                  document.getElementById("result").innerHTML = first + second;
-                }
-                  
-              }
-      </script>
+<!-- All kinds of Scripts -->
+
+<!-- Load JQuery and bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS script for animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init()</script>
+
+
+<!-- Custom script for caclulating sum -->
+<script>
+  // Define an Event if button is clicked
+  var calcbutton = document.getElementById("calc");
+        calcbutton.addEventListener("click", calculate);
+
+        // calculate function
+        function calculate() {
+
+          // Get the values of both inputs
+          var first = parseInt(document.getElementById("first").value);
+          var second = parseInt(document.getElementById("second").value);
+
+          // Check if inouts are numbers, if so, output result, if not output warning
+          if (isNaN(first) || isNaN(second)){
+            document.getElementById("result").innerHTML = "One of your inputs is not a number";
+          } 
+          else {
+            document.getElementById("result").innerHTML = first + second;
+          }
+            
+        }
+</script>
 </html>
